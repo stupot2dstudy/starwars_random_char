@@ -1,0 +1,45 @@
+body {
+  background-image: url("/images/brackgroundimg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position-y: 8vw;
+  background-color: black;
+  margin: 0;
+  height: 100%;
+  width: auto;
+
+  color: yellow;
+}
+
+header {
+  text-align: center;
+}
+h1 {
+  font-size: 4vw;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vw;
+  gap: 20%;
+}
+.image_container {
+  border: 1px solid blue;
+  flex-basis: 40%;
+}
+h3 {
+}
+.char_details {
+  flex-basis: 40%;
+  border: 1px solid red;
+  font-size: 2vw;
+}
+
+footer > p {
+  font-size: 1vw;
+  text-align: right;
+  justify-content: end;
+}
