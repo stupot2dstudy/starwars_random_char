@@ -1,14 +1,23 @@
-let btn = document.getElementById("button");
-btn.addEventListener("click", button);
+const names = document.getElementById("names");
+const homeworld = document.getElementById("planet");
+const gender = document.getElementById("gender");
+const button = document.querySelector(".ramdonmizeButton");
 
-function funcButton() {
-  const randomNumber = Math.floor(Math.random() * 82);
-  fetch("https://swapi.dev//api/people/" + randomNumber)
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  names.innerHTML = "<em>Loading...</em>";
+  planet.innerHTML = "<em>Loading...</em>";
+  gender.innerHTML = "<em>Loading...</em>";
+  image.innerHTML = "<em>Loading...</em>";
+
+  const randomNumber = Math.ceil(Math.random() * 83);
+  fetch(`https://akabab.github.io/starwars-api/api/id/${randomNumber}.json`)
     .then((response) => response.json())
-    .then((data) => {
-      console.log(randomNumber, data.name, data.homeworld, data.films);
-      names.innerHTML = data.name;
-      planet.innerHTML = data.homeworld;
-      movies.innerHTML = data.films;
+    .then((character) => {
+      console.log(character);
+      names.innerHTML = character.name;
+      planet.innerHTML = character.homeworld;
+      gender.innerHTML = character.gender;
+      image.innerHTML = `<img src = ${character["image"]} height = 100% width = 100%/>`;
     });
-}
+});
