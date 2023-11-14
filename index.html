@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Randomize StarWars Character</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Choose your random StarWars Character</h1>
-      <div class="button_container">
-        <button class="ramdonmizeButton">Click Me!</button>
-      </div>
-    </header>
-    <main>
-      <div class="image_container">
-        <div id="image"></div>
-      </div>
-      <div class="char_details">
-        <h3>Character Details</h3>
-        <div id="result"></div>
-        <strong>Name:</strong>
-        <div id="names">...</div>
-        <strong>Planet:</strong>
-        <div id="planet">planet</div>
-        <strong>Gender:</strong>
-        <div id="gender">...</div>
-      </div>
-    </main>
-    <footer>
-      <p>Copyright stupot2d</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Starwars Random Character</title>
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="header-container">
+                <a href="#" class="header-container-button">
+                    StarWars Random Character
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="main-container">
+                <div class="main-container-profile">
+                    <ul class="main-container-profile-header">
+                        <img src="/images/profile-picture.jpg" alt="img-profile" class="main-container-profile-img">
+                    </ul>
+                    <ul class="main-container-profile-body">
+                        <li class="main-container-profile-content-name">
+                            Name:
+                        </li>
+                        <li class="main-container-profile-content-homeworld">
+                            Homeworld:
+                        </li>
+                        <li class="main-container-profile-content-species">
+                            Specie:
+                        </li>
+                    </ul>
+                    <ul class="main-container-profile-footer">
+                        <li>Starwars 2023</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <p class="footer-container-creator">
+                    By @stupot2d
+                </p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </div>
+</body>
+
 </html>
