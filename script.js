@@ -9,7 +9,17 @@ function chooseYourCharacter(character) {
     speciesElement.textContent = `Species: ${character.species}`;
 
     if (character.image && character.image.trim() !== '') {
-        imageElement.src = character.image;
+        fetch(character.image)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Image not found! Status: ${response.status}`);
+                }
+                imageElement.src = character.image;
+            })
+            .catch(error => {
+                console.error('Image fetch error:', error);
+                imageElement.src = 'images/image_notfound.png'; // Set default image on error
+            });
     } else {
         // Set a default image if the character doesn't have an image
         imageElement.src = 'images/profile-picture.jpg'; // Replace 'profile-picture.jpg' with your default image path
@@ -34,7 +44,7 @@ function bringStarWarsChar(randomNumber) {
                     name: 'Not Found',
                     homeworld: 'N/A',
                     species: 'N/A',
-                    image: ''
+                    image: '' || 'images/profile-picture.jpg'
                 });
             }
         })
@@ -45,6 +55,13 @@ function bringStarWarsChar(randomNumber) {
 
 const showMe = document.querySelector('.header-container');
 showMe.addEventListener("click", (e) => {
+    e.preventDefault();
+    const randomNumber = Math.ceil(Math.random() * 83);
+    bringStarWarsChar(randomNumber);
+});
+
+const showMeTwo = document.querySelector('.main-container-profile');
+showMeTwo.addEventListener("click", (e) => { // Fixed reference to showMeTwo
     e.preventDefault();
     const randomNumber = Math.ceil(Math.random() * 83);
     bringStarWarsChar(randomNumber);

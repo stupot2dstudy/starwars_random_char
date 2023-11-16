@@ -27,15 +27,24 @@ body {
     
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 100px;
+    
 }
 
 .header-container > a {
+    
     text-decoration: none;
     font-size: 1.8rem;
     color: #333;
     font-weight: bold;
 }
+
+.header-container > a:hover {
+    color: #555;
+
+    
+}
+
 
 .main-container {
     display: flex;
@@ -47,6 +56,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     max-width: 400px;
+    
 }
 
 .main-container-profile {
@@ -57,6 +67,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     background-color: #f9f9f9;
+    
 }
 
 .main-container-profile-img {
@@ -66,6 +77,17 @@ body {
     object-fit: cover;
     border: 6px solid #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.main-container-profile-img:hover {
+
+
+
+
+    border: 6px solid grey;
+
+    
 }
 
 .main-container-profile-body > li {
